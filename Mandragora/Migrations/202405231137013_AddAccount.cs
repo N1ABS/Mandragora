@@ -1,0 +1,33 @@
+namespace Mandragora.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class AddAccount : DbMigration
+    {
+        public override void Up()
+        {
+            CreateTable(
+                "dbo.Accounts",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        ApplicationUserId = c.Int(nullable: false),
+                        FirstName = c.String(),
+                        LastName = c.String(),
+                        ApplicationUser_Id = c.String(maxLength: 128),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.AspNetUsers", t => t.ApplicationUser_Id)
+                .Index(t => t.ApplicationUser_Id);
+            
+        }
+        
+        public override void Down()
+        {
+            DropForeignKey("dbo.Accounts", "ApplicationUser_Id", "dbo.AspNetUsers");
+            DropIndex("dbo.Accounts", new[] { "ApplicationUser_Id" });
+            DropTable("dbo.Accounts");
+        }
+    }
+}

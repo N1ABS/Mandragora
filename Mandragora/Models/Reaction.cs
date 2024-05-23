@@ -11,5 +11,9 @@ namespace Mandragora.Models
         public int PostId { get; set; }
         public int AccountId { get; set; }
         public byte ReactionType { get; set; }
+
+        public virtual Account Account { get; set; }
+
+        public virtual Post Post { get; set; }
     }
 }

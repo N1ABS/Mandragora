@@ -12,5 +12,10 @@ namespace Mandragora.Models
         public int PlantId { get; set; }
         public DateTime PostDate { get; set; }
         public string Content { get; set; }
+
+        public virtual Account Account { get; set; }
+        public virtual Plant Plant { get; set; }
+
+
     }
 }

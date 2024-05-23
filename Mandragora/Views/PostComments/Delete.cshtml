@@ -1,0 +1,48 @@
+﻿@model Mandragora.Models.PostComment
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PostComment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Account.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Account.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Post.Content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Post.Content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
