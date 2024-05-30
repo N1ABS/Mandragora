@@ -55,12 +55,12 @@ namespace Mandragora.Controllers
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-                : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
-                : message == ManageMessageId.SetTwoFactorSuccess ? "Your two-factor authentication provider has been set."
-                : message == ManageMessageId.Error ? "An error has occurred."
-                : message == ManageMessageId.AddPhoneSuccess ? "Your phone number was added."
-                : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
+                message == ManageMessageId.ChangePasswordSuccess ? "Құпия сөзіңіз өзгертілді."
+                : message == ManageMessageId.SetPasswordSuccess ? "Құпия сөзіңіз орнатылды."
+                : message == ManageMessageId.SetTwoFactorSuccess ? "Екі факторлы аутентификация провайдері орнатылды."
+                : message == ManageMessageId.Error ? "Қате орын алды."
+                : message == ManageMessageId.AddPhoneSuccess ? "Телефон нөміріңіз қосылды."
+                : message == ManageMessageId.RemovePhoneSuccess ? "Телефон нөміріңіз жойылды."
                 : "";
 
             var userId = User.Identity.GetUserId();
