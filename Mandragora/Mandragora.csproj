@@ -182,13 +182,9 @@
     <Compile Include="Migrations\202405231130395_InitialCreate.Designer.cs">
       <DependentUpon>202405231130395_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202405231137013_AddAccount.cs" />
-    <Compile Include="Migrations\202405231137013_AddAccount.Designer.cs">
-      <DependentUpon>202405231137013_AddAccount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202405231201377_AddPosts.cs" />
-    <Compile Include="Migrations\202405231201377_AddPosts.Designer.cs">
-      <DependentUpon>202405231201377_AddPosts.cs</DependentUpon>
+    <Compile Include="Migrations\202405301336266_addalltables.cs" />
+    <Compile Include="Migrations\202405301336266_addalltables.Designer.cs">
+      <DependentUpon>202405301336266_addalltables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
@@ -334,11 +330,8 @@
     <EmbeddedResource Include="Migrations\202405231130395_InitialCreate.resx">
       <DependentUpon>202405231130395_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202405231137013_AddAccount.resx">
-      <DependentUpon>202405231137013_AddAccount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202405231201377_AddPosts.resx">
-      <DependentUpon>202405231201377_AddPosts.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202405301336266_addalltables.resx">
+      <DependentUpon>202405301336266_addalltables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

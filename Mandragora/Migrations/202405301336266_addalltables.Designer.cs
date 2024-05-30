@@ -7,13 +7,13 @@ namespace Mandragora.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddAccount : IMigrationMetadata
+    public sealed partial class addalltables : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddAccount));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addalltables));
         
         string IMigrationMetadata.Id
         {
-            get { return "202405231137013_AddAccount"; }
+            get { return "202405301336266_addalltables"; }
         }
         
         string IMigrationMetadata.Source
